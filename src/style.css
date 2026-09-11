@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+/* Tipografía de Marca Oficial Altikore: Conthrax SemiBold */
+@font-face {
+  font-family: 'Conthrax';
+  src: url('/fonts/Conthrax-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Habilitar la variante dark basada en la clase .dark en Tailwind CSS v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Paleta Oficial Altikore (Tokens de Diseño Estrictos) */
+  --color-electric-cobalt: #0052FF;
+  --color-magenta-blaze: #FF007A;
+  --color-neo-cyan: #00D2FF;
+  --color-deep-pulse: #0B0F19;
+  --color-ultraviolet: #6E0DF2;
+  --color-plasma-pink: #FF4D94;
+  --color-lightstream: #F8FAFC;
+  --color-darkflow: #1E293B;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-brand: 'Conthrax', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Tokens semánticos de tema con roles de color disciplinados */
+:root {
+  /* Paleta Oficial Altikore */
+  --color-bg-primary: #0B0F19;         /* Deep Pulse */
+  --color-neutral-light: #F8FAFC;      /* Lightstream White */
+  --color-surface-dark: #1E293B;       /* Darkflow Grey */
+  --color-accent-live: #00D2FF;        /* Neo Cyan */
+  --color-cta: #0052FF;                /* Electric Cobalt */
+  --color-highlight: #FF007A;          /* Magenta Blaze */
+  --color-brand-start: #0052FF;
+  --color-brand-mid: #6E0DF2;          /* Ultraviolet Shift */
+  --color-brand-end: #FF007A;
+
+  --bg-primary: #F8FAFC;               /* Lightstream White (modo claro por defecto) */
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F1F5F9;
+  --bg-surface-dark: #1E293B;          /* Darkflow Grey */
+  --text-main: #0B0F19;                /* Deep Pulse */
+  --text-muted: #334155;
+  --text-dim: #64748B;
+  --border-subtle: rgba(30, 41, 59, 0.12);
+  --border-card: rgba(30, 41, 59, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-hover-bg: rgba(255, 255, 255, 0.98);
+  --grid-color: rgba(11, 15, 25, 0.05);
+
+  /* Roles funcionales */
+  --cta-bg: #0052FF;                   /* Electric Cobalt sólido */
+  --accent-live: #00D2FF;              /* Neo Cyan exclusivamente para datos vivos */
+  --highlight-accent: #FF007A;         /* Magenta Blaze para momentos de alta jerarquía */
+}
+
+.dark {
+  --bg-primary: #0B0F19;               /* Deep Pulse */
+  --bg-surface: #101626;
+  --bg-surface-elevated: #1E293B;      /* Darkflow Grey */
+  --bg-surface-dark: #1E293B;
+  --text-main: #F8FAFC;                /* Lightstream White */
+  --text-muted: #CBD5E1;
+  --text-dim: #94A3B8;
+  --border-subtle: rgba(248, 250, 252, 0.12);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(16, 22, 38, 0.7);
+  --glass-hover-bg: rgba(24, 32, 54, 0.85);
+  --grid-color: rgba(248, 250, 252, 0.05);
+
+  --cta-bg: #0052FF;
+  --accent-live: #00D2FF;
+  --highlight-accent: #FF007A;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Clases de texto semánticas */
+.text-main {
+  color: var(--text-main) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-dim {
+  color: var(--text-dim) !important;
+}
+
+/* Indicador de dato en vivo (Neo Cyan exclusivo) */
+.data-live {
+  color: #00D2FF !important;
+  font-family: var(--font-mono);
+}
+
+.badge-live {
+  background: rgba(0, 210, 255, 0.1);
+  color: #00D2FF;
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  font-family: var(--font-mono);
+}
+
+/* Botón CTA principal de ingeniería: Sólido Electric Cobalt sin gradiente decorativo */
+.btn-primary-altikore {
+  background-color: #0052FF;
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-primary-altikore:hover {
+  background-color: #0045D8;
+  box-shadow: 0 10px 25px -5px rgba(0, 82, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-altikore {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-altikore:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Scroll clearance estricto para evitar que el header fijo tape títulos */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 105px;
+}
+
+section[id], div[id] {
+  scroll-margin-top: 110px;
+}
+
+/* Header Glassmorphism con opacidad reforzada (evita que el texto que pasa por debajo se traspase) */
+.header-glass-nav {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(30, 41, 59, 0.12);
+  transition: all 0.25s ease;
+}
+
+.dark .header-glass-nav {
+  background: rgba(11, 15, 25, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Glassmorphism disciplinado para tarjetas de contenido */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-card);
+  transition: all 0.25s ease;
+}
+
+.glass-panel-hover:hover {
+  background: var(--glass-hover-bg);
+  border-color: rgba(0, 82, 255, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(0, 82, 255, 0.2);
+}
+
+/* Firma de Marca: Gradiente oficial Altikore (reservado solo para Logo y resplandor hero) */
+.altikore-brand-gradient {
+  background: linear-gradient(135deg, #0052FF 0%, #6E0DF2 50%, #FF007A 100%);
+}
+
+.gradient-text-altikore {
+  background: linear-gradient(135deg, #FFFFFF 30%, #00D2FF 70%, #FF007A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .gradient-text-altikore {
+  background: linear-gradient(135deg, #FFFFFF 40%, #00D2FF 75%, #FF007A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tipografía de Marca Altikore (Conthrax) */
+.font-brand {
+  font-family: 'Conthrax', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Monospace aplicado con propósito real (datos técnicos) */
+.font-tech-data {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+/* Fondo de patrón sobrio */
+.bg-grid-pattern {
+  background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Orbe de luz ambiental controlado (un solo resplandor en hero) */
+.hero-glow-orb {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 82, 255, 0.18) 0%, rgba(110, 13, 242, 0.12) 40%, rgba(255, 0, 122, 0.05) 70%, transparent 80%);
+  filter: blur(80px);
+  pointer-events: none;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 82, 255, 0.4);
+}
