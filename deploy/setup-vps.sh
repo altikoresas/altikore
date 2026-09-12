@@ -58,4 +58,4 @@ sudo systemctl reload nginx
 
 echo "✅ Despliegue completado con éxito."
 echo "🔒 Para habilitar SSL gratuito con tu dominio, ejecuta:"
-echo "   sudo certbot --nginx -d tudominio.com -d www.tudominio.com"
+echo "   sudo certbot --nginx -d altikore.tech -d www.altikore.tech"
