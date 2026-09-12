@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desarrollo de Software Nativo Windows 11 en Colombia | Altikore S.A.S.</title>
+  
+  <link rel="canonical" href="https://altikore.tech/servicios/software-nativo-windows.html" />
+  <meta name="description" content="Desarrollo de aplicaciones de escritorio nativas para Windows 11 con C#, .NET 8, WinUI 3 y Fluent Design en Manizales y Colombia. Máximo rendimiento, arranque instantáneo y mínimo consumo de memoria RAM." />
+  <meta name="keywords" content="desarrollo apps nativas Windows Colombia, WinUI 3 desarrollo, software nativo C# Colombia, .NET 8 Manizales, Fluent Design Windows 11, aplicaciones escritorio Colombia" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="CO-CAL" />
+  <meta name="geo.placename" content="Manizales, Caldas, Colombia" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body class="font-sans antialiased selection:bg-[#0052FF] selection:text-white relative overflow-x-hidden min-h-screen">
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-3.5">
+    <div class="max-w-6xl mx-auto">
+      <nav class="header-glass-nav rounded-2xl px-5 py-3 flex items-center justify-between shadow-2xl">
+        <a href="/" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl altikore-brand-gradient flex items-center justify-center p-1">
+            <img src="/assets/projects/logo-altikore.png" alt="Altikore" class="w-full h-full object-contain brightness-0 invert" />
+          </div>
+          <span class="font-bold text-base font-brand tracking-wider text-main">ALTIKORE</span>
+        </a>
+        <div class="flex items-center gap-4">
+          <a href="/#servicios" class="text-xs font-medium text-muted hover:text-main">Especialidades</a>
+          <a href="/#contacto" class="btn-primary-altikore px-4 py-2 rounded-xl text-xs font-bold shadow">Cotizar Solución</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-32 pb-24 px-4 sm:px-8 max-w-4xl mx-auto space-y-12">
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-black/10 dark:border-white/15 bg-white/60 dark:bg-white/5 backdrop-blur-xl text-xs font-mono text-muted">
+        <span class="w-2 h-2 rounded-full bg-[#0052FF] animate-pulse"></span>
+        <span>Especialidad de Ingeniería • Manizales, Caldas, Colombia</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-main font-sans tracking-tight">
+        Software Nativo para Windows 11 &amp; .NET 8
+      </h1>
+      <p class="text-base sm:text-lg text-muted leading-relaxed">
+        Creamos software de escritorio de alta eficiencia con WinUI 3 y Windows App SDK. Sin wrappers pesados de Electron: arranque en menos de 250ms y consumo inferior a 45MB de RAM.
+      </p>
+    </div>
+
+    <section class="glass-panel p-8 rounded-3xl space-y-6 border border-black/10 dark:border-white/10">
+      <h2 class="text-xl font-bold text-main flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#0052FF]"></span>
+        Aceleración GPU &amp; Persistencia SQLite WAL
+      </h2>
+      <p class="text-sm text-muted leading-relaxed">
+        Diseñado para empresas y usuarios que no toleran lentitud. La interfaz aprovecha el material nativo Mica Alt de Windows 11 y escribe datos locales con Write-Ahead Logging para garantizar tolerancia ante cortes eléctricos.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+        <div class="p-4 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03] border border-black/5 dark:border-white/10 space-y-2">
+          <div class="text-xs font-bold text-[#0052FF] font-mono">01. Rendimiento &lt;45MB RAM</div>
+          <p class="text-xs text-muted">Hasta 90% menos consumo de recursos comparado con aplicaciones construidas sobre frameworks web empaquetados.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03] border border-black/5 dark:border-white/10 space-y-2">
+          <div class="text-xs font-bold text-emerald-400 font-mono">02. Cifrado Hardware DPAPI</div>
+          <p class="text-xs text-muted">Protección de credenciales y tokens OAuth a nivel de sistema operativo mediante las APIs criptográficas nativas de Windows.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-panel p-8 rounded-3xl border border-black/10 dark:border-white/10 space-y-4">
+      <div class="text-xs font-mono font-bold text-[#0052FF] uppercase">Caso en Producción</div>
+      <h3 class="text-xl font-bold text-main">Caso de Éxito: StickyNotes Fluent Native</h3>
+      <p class="text-sm text-muted leading-relaxed">
+        Herramienta de productividad para Windows 11 con panel acoplable SideNotes, sincronización en la nube y persistencia en microsegundos.
+      </p>
+      <div class="pt-2">
+        <a href="/casos/stickynotes.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#0052FF] dark:text-[#00D2FF] hover:underline font-mono">
+          <span>Ver Ficha Técnica de StickyNotes &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="text-center p-8 rounded-3xl glass-panel border border-black/10 dark:border-white/10 space-y-4">
+      <h3 class="text-2xl font-bold text-main">¿Requieres una herramienta nativa para tu infraestructura?</h3>
+      <p class="text-xs sm:text-sm text-muted max-w-xl mx-auto">
+        Desarrollamos soluciones desktop de alto calibre integradas al ecosistema Microsoft de tu organización.
+      </p>
+      <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
+        <a href="/#contacto" class="btn-primary-altikore px-6 py-3 rounded-xl text-xs font-bold shadow">Consultar con un Ingeniero</a>
+        <a href="https://wa.me/573024615828" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow hover:scale-105 transition-transform">WhatsApp Directo</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-black/10 dark:border-white/10 py-8 text-center text-xs text-dim font-mono">
+    &copy; 2026 ALTIKORE S.A.S. • Manizales, Caldas, Colombia • <a href="/" class="hover:underline text-main">Volver al Inicio</a>
+  </footer>
+</body>
+</html>
