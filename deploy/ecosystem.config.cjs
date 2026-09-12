@@ -16,9 +16,9 @@ module.exports = {
         PORT: 3001,
         SMTP_HOST: 'smtp.hostinger.com',
         SMTP_PORT: 465,
-        SMTP_USER: 'contacto@altikore.com',
+        SMTP_USER: 'gerencia@altikore.tech',
         SMTP_PASS: 'TU_PASSWORD_AQUI',
-        NOTIFICATION_EMAIL: 'contacto@altikore.com'
+        NOTIFICATION_EMAIL: 'gerencia@altikore.tech'
       }
     }
   ]

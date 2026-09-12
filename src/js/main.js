@@ -456,7 +456,7 @@ function initContactForm() {
         showFeedback(true, '¡Gracias por contactar a Altikore! Nuestro equipo de ingeniería te responderá a la brevedad.');
         form.reset();
       } else {
-        showFeedback(true, '¡Solicitud recibida! Te contactaremos pronto desde contacto@altikore.com.');
+        showFeedback(true, '¡Solicitud recibida! Te contactaremos pronto desde gerencia@altikore.tech.');
         form.reset();
       }
     } catch (err) {

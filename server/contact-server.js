@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
   port: parseInt(process.env.SMTP_PORT || '465', 10),
   secure: (process.env.SMTP_PORT || '465') === '465',
   auth: {
-    user: process.env.SMTP_USER || 'contacto@altikore.tech',
+    user: process.env.SMTP_USER || 'gerencia@altikore.tech',
     pass: process.env.SMTP_PASS || '',
   },
 });
@@ -45,8 +45,8 @@ app.post('/api/contact', async (req, res) => {
 
   try {
     await transporter.sendMail({
-      from: `"Altikore Web Lead" <${process.env.SMTP_USER || 'contacto@altikore.tech'}>`,
-      to: process.env.NOTIFICATION_EMAIL || 'contacto@altikore.tech',
+      from: `"Altikore Web Lead" <${process.env.SMTP_USER || 'gerencia@altikore.tech'}>`,
+      to: process.env.NOTIFICATION_EMAIL || 'gerencia@altikore.tech',
       replyTo: email,
       subject: `[Nuevo Lead Altikore] ${name} - ${projectType || 'Consulta General'}`,
       text: `Nombre: ${name}\nCorreo: ${email}\nTipo de Proyecto: ${projectType}\n\nMensaje:\n${message}`,
