@@ -158,6 +158,64 @@
   }
   </script>
 
+  <!-- Schema.org JSON-LD para FAQPage (Rich Snippets con desplegables en Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Quién es el dueño del código fuente y la propiedad intelectual desarrollada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El cliente es el titular absoluto del 100% del código fuente, repositorios, configuraciones de infraestructura y modelos adaptados con sus datos una vez liquidado el proyecto, conforme a la Ley 23 de 1982 y la Decisión Andina 351."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo garantizan latencias sub-100ms y alta concurrencia en producción?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Implementamos algoritmos multihilo con frame-skipping predictivo en visión artificial, y frameworks cargados en memoria RAM (Laravel Octane con RoadRunner, o Node.js con Prisma) para respuestas HTTP en menos de 15ms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es el tiempo promedio para lanzar un MVP a producción?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trabajamos en sprints iterativos de 2 semanas. Un MVP funcional con despliegue en servidor suele estar listo para validación entre la 4ª y la 8ª semana."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué soporte y Acuerdos de Nivel de Servicio (SLA) ofrecen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ofrecemos planes de mantenimiento técnico con acuerdos de disponibilidad del 99.9%, tiempos de atención a emergencias críticas menores a 2 horas y monitoreo continuo con Prometheus y Grafana."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo es el proceso de facturación y contratación legal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Somos una sociedad comercial legalmente constituida (ALTIKORE S.A.S.). Emitimos facturación formal y electrónica para clientes en Colombia y acuerdos comerciales internacionales en USD mediante transferencia bancaria (Wire / SWIFT)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Prestan servicios de desarrollo de software en Manizales, Eje Cafetero y toda Colombia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Nuestra sede está en Manizales, Caldas. Atendemos presencialmente Manizales, Pereira, Armenia y Medellín, y de forma remota a toda Colombia e internacionalmente."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Vite Stylesheet with Tailwind v4 -->
   <link rel="stylesheet" href="/src/style.css" />
 </head>
@@ -1078,7 +1136,7 @@
         <button id="privacy-close-btn" class="p-1 rounded-lg text-dim hover:text-main cursor-pointer">✕</button>
       </div>
       <div class="text-xs text-muted space-y-3 leading-relaxed">
-        <p><strong>Razón Social:</strong> ALTIKORE S.A.S., sociedad comercial por acciones simplificada legalmente constituida en Colombia, domiciliada en Manizales, Caldas. Correo oficial: <strong>contacto@altikore.com</strong>.</p>
+        <p><strong>Razón Social:</strong> ALTIKORE S.A.S., sociedad comercial por acciones simplificada legalmente constituida en Colombia, domiciliada en Manizales, Caldas. Correo oficial: <strong>contacto@altikore.tech</strong>.</p>
         <p>En cumplimiento de la <strong>Ley 1581 de 2012</strong> y el <strong>Decreto 1377 de 2013</strong>, le informamos que los datos suministrados a través de este formulario se destinarán exclusivamente a la evaluación de viabilidad arquitectónica, elaboración de propuestas comerciales de software, contacto técnico y cumplimiento legal y tributario.</p>
         <p>Como titular, usted tiene derecho a <strong>conocer, actualizar, rectificar y solicitar la supresión</strong> de sus datos personales (Derechos ARCO), así como revocar la autorización enviando una solicitud a nuestro correo electrónico.</p>
         <p class="text-[11px] text-dim">
